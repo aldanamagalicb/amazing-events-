@@ -1,1 +1,1 @@
-# amazing-events-Task2
+# Amazing-Events-Task2

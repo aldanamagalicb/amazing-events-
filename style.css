@@ -249,7 +249,7 @@ form {
 @media screen and (max-width: 440px) {
 
   .banner > h2{
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
   .footer {
     flex-direction: column;

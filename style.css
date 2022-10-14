@@ -67,8 +67,10 @@ nav a {
 .banner > h2 {
   color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 56px;
+  font-size: 2.9rem;
 }
+
+
 .banner > h2:hover {
   color: rgba(217, 3, 104, 255);
 }
@@ -244,7 +246,11 @@ form {
   justify-content: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 440px) {
+
+  .banner > h2{
+    font-size: 1.9rem;
+  }
   .footer {
     flex-direction: column;
     height: auto;
@@ -253,8 +259,5 @@ form {
     width: 50px;
     padding: 10px;
     height: 50px;
-  }
-  .reduced {
-    font-size: 38px !important;
   }
 }

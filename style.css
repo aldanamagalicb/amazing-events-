@@ -10,7 +10,6 @@
     rgba(174, 238, 234, 1) 0%,
     rgba(156, 148, 233, 1) 87%
   );
-
 }
 
 .logo {
@@ -69,7 +68,6 @@ nav a {
   font-weight: bold;
   font-size: 2.9rem;
 }
-
 
 .banner > h2:hover {
   color: rgba(217, 3, 104, 255);
@@ -214,7 +212,6 @@ nav a {
 /* MEDIA QUERY */
 
 @media screen and (max-width: 990px) {
-
   .header-container {
     flex-direction: row-reverse;
   }
@@ -247,8 +244,7 @@ form {
 }
 
 @media screen and (max-width: 440px) {
-
-  .banner > h2{
+  .banner > h2 {
     font-size: 2rem;
   }
   .footer {

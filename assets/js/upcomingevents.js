@@ -8,19 +8,16 @@ for (let event of data.events) {
 
 function getCard(event) {
     container.innerHTML += `
-      <article class="card" style="width: 18rem">
-      <img
-        src="${event.image}"
-        class="card-img-top"
-        alt=${event.name}"
-      />
-      <div class="card-body">
-        <h5 class="card-title">${event.name}</h5>
-        <p class="card-text">
-        ${event.description}</p>
-        <button class="btn btn-info">Price: $${event.price}</button>
-        <a href="./pages/onlycard.html" class="btn btn-primary">See more</a>
+    <article class="card">
+    <img src="${event.image}" class="card-img-top" alt="${event.name}">
+    <div class="card-body d-flex flex-column justify-content-between">
+      <h5 class="card-title">${event.name}</h5>
+      <p class="card-text">${event.description}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <p>Price: $${event.price}</p>
+        <a href="./details.html" class="btn btn-primary">More details</a>
       </div>
+    </div>
     </article>
     `;
   }

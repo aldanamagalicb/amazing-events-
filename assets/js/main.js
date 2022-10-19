@@ -1,14 +1,17 @@
-// Obtenemos el id de los elementos
+// Obtenemos el id de los elementos de las cards para luego crearlas dentro del contenedor 
 const container = document.getElementById("main-content");
+//Obtengo el título de cada pagina(home, pastE y upcomingE) para que las cards se filtren de acuerdo a donde pertenezcan
 const title = document.getElementById("tittle");
-const inputSearch = document.getElementById("cont_search");
-const containerCheckbox = document.getElementById("container_check");
+
 
 
 // Obtiene la data del currentDate
-
 const date = data.currentDate;
+
+//Creamos un nuevo array (card) a través del map
 const card = [...data.events].map((event) => event);
+
+
 const indexCards = card.filter(() => title.text.includes("Home"));
 const upcomingCards = card.filter(() => title.text.includes("Upcoming"))
   .filter((card) => card.date > date);
@@ -18,8 +21,17 @@ const pastCards = card.filter(() => title.text.includes("Past"))
 let cardsFucionadas = [...indexCards, ...upcomingCards, ...pastCards];
 cardsFucionadas.forEach(getCard);
 
+//Filtro de categorias checkbox y maping search
+
+//Obtenemos el id de los contenedores de checkbox y search
+const inputSearch = document.getElementById("cont_search");
+const containerCheckbox = document.getElementById("container_check");
+
+
+//Nombro los checkbox: aplico reduce al card(que es el array que creé con map anteriormente) para obtener el valor del key (category) que deseo por cada interacion (event), para reunirlas en un nuevo array (allCategorys). Otra opcion tambien pudo haber sido map
 const categorys = card.reduce ((allCategorys, data)=> Array.from(new Set([...allCategorys, data.category])), []);
 
+//Pongo el cajoncito de check
 categorys.forEach(container_check)
 
 function container_check(category){
@@ -37,8 +49,13 @@ function container_check(category){
                `;
 }
 
+//Llamo al id donde se encuentra el input del checkbox (en la funcion definida en la linea 34)
 let categoryCheckbox = document.querySelectorAll(".categoryCheckbox")
+
+//El query selector nos devuelve un nodo, entonces hay que convertirlo en array
 categoryCheckbox = Array.from(categoryCheckbox)
+
+//Genero un event "click" para que en cada click realice la funcion en la linea 59
 categoryCheckbox.forEach(check => check.addEventListener("click" , checks))
 inputSearch.addEventListener("input", checks)
 
@@ -71,6 +88,7 @@ function filteringCardsForSearch(array, textoDeBusquedaDelUsuario){
   return cartasFiltradas
 }
 
+//Creo una funcion en donde en c
 function searchNull() {
   container.innerHTML = `
   <article class="d-flex flex-column align-items-center">
@@ -92,7 +110,7 @@ function getCard(event) {
     <p class="card-text">${event.description}</p>
     <div class="d-flex justify-content-between align-items-center">
       <p>U$D ${event.price}</p>
-      <a href="../../paginas/details.html?id=${event._id}" class="btn btn-primary">More details</a>
+      <a href="../paginas/details.html?id=${event._id}" class="btn btn-primary">More details</a>
     </div>
   </div>
   </article>

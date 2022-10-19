@@ -26,13 +26,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./assets/style/style.css" rel="stylesheet" />
   </head>
   <body class="full-container d-flex flex-column align-items-center">
     <header class="w-100 d-flex justify-content-between header-container">
       <div class="p-3 w-50">
         <img class="logo img-fluid" src="./assets/images/logo.png" alt="Logo" />
       </div>
+
+      <!-- NAV -->
+
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <button
@@ -49,38 +52,27 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link text-dark active"
-                  aria-current="page"
-                  href="#"
-                  >Home</a
-                >
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link text-dark inactive"
+                  class="nav-link inactive"
                   href="./paginas/upcomingevents.html"
                   >Upcoming Events</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-dark inactive"
-                  href="./paginas/pastevents.html"
+                <a class="nav-link inactive" href="./paginas/pastevents.html"
                   >Past Events</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-dark inactive"
-                  href="./paginas/contact.html"
+                <a class="nav-link inactive" href="./paginas/contact.html"
                   >Contact</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-dark inactive"
-                  href="./paginas/stats.html"
+                <a class="nav-link inactive" href="./paginas/stats.html"
                   >Stats</a
                 >
               </li>
@@ -92,62 +84,32 @@
     <div class="banner text-center">
       <h2>HOME</h2>
     </div>
+
+    <!-- FORM AND CHECKBOX -->
+
     <main class="full-container-fluid main-container">
-      <div class="category-container pt-3">
-        <div class="form-check form-check-inline">
+      <div
+        class="category_container flex-wrap justify-content-center align-items-center pt-3 m-3 d-flex"
+      >
+        <div class="w-52" id="container_check"></div>
+        <form class="full-container-fluid">
           <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox1"
-            value="option1"
-          />
-          <label class="form-check-label" for="inlineCheckbox1">Category</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox2"
-            value="option2"
-          />
-          <label class="form-check-label" for="inlineCheckbox2">Category</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox3"
-            value="option3"
-          />
-          <label class="form-check-label" for="inlineCheckbox3">Category</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="inlineCheckbox4"
-            value="option4"
-          />
-          <label class="form-check-label" for="inlineCheckbox4">Category</label>
-        </div>
-        <form>
-          <input
+            id="cont_search"
             class="form-control"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="noborder" type="submit">
-            <img
-              class="search-btn"
-              src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png"
-              alt="search"
-            />
-          </button>
         </form>
       </div>
+
+      <!-- CARDS -->
+
       <div class="cards-container" id="main-content"></div>
     </main>
+
+    <!-- FOOTER -->
+
     <footer class="footer d-flex justify-content-between align-items-center">
       <div class="social-container">
         <a href="https://www.instagram.com/aldanachh_/"
@@ -181,6 +143,8 @@
         <h2>Cohort 36</h2>
       </div>
     </footer>
+
+    <!-- SCRIPT -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

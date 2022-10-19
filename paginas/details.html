@@ -22,7 +22,7 @@
     href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
     rel="stylesheet"
   />
-  <link href="../style.css" rel="stylesheet" />
+  <link href="../assets/style/style.css" rel="stylesheet" />
 </head>
 <body class="full-container d-flex flex-column align-items-center">
   <header class="w-100 d-flex justify-content-between header-container">
@@ -46,7 +46,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link text-dark inactive"
+                class="nav-link inactive"
                 aria-current="page"
                 href="../index.html"
                 >Home</a
@@ -54,28 +54,28 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-dark inactive"
+                class="nav-link inactive"
                 href="./upcomingevents.html"
                 >Upcoming Events</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-dark inactive"
+                class="nav-link inactive"
                 href="./pastevents.html"
                 >Past Events</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-dark inactive"
+                class="nav-link inactive"
                 href="./contact.html"
                 >Contact</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-dark inactive"
+                class="nav-link inactive"
                 href="./stats.html"
                 >Stats</a
               >
@@ -89,21 +89,7 @@
     <h2>DETAILS</h2>
   </div>
   <main class="full-container-fluid main-container">
-      <div class="cards-container2">
-        <article class="only_card">
-          <img src="../assets/images/feriadecomidas.jpg" class="card-img2" alt="..." />
-          <div class="card-body2">
-            <h5 class="card-title2">Festival of the collectivities</h5>
-            <p class="card-text2">
-              Enjoy your favorite dishes from different countries in a unique
-              event for the whole family.
-            </p>
-            <div class="buttons-cardsx">
-              <button class="btn btn-dark">U$D 8</button>
-              <a href="#" class="btn btn-danger">Buy</a>
-            </div>
-          </div>
-        </article>
+      <div class="container-fluid cards-container2" id="details_container">      
       </div>
     </main>
     <footer class="footer d-flex justify-content-between align-items-center">
@@ -140,5 +126,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/details.js"></script>
   </body>
 </html>

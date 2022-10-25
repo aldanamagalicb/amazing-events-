@@ -2,7 +2,8 @@ const containerDetails = document.getElementById("details_container")
 
 async function infoDetails(){
   try{
-    var detailsJson = await (await fetch('https://mh-amazing.herokuapp.com/amazing')).json()
+    var detailsJson =  await fetch('https://mh-amazing.herokuapp.com/amazing')
+    detailsJson = await detailsJson.json()
   }catch(notFound){
       console.log(notFound)
   }

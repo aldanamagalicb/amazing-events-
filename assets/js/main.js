@@ -8,7 +8,8 @@ const inputSearch = document.getElementById("cont_search");
 
 async function cardJsonEvents(){
   try {
-    var eventsApi = await (await fetch('https://mh-amazing.herokuapp.com/amazing')).json()
+    var eventsApi = await fetch('https://mh-amazing.herokuapp.com/amazing')
+    eventsApi = await eventsApi.json()
   } catch (error) {
       console.log (error)
   } 
@@ -81,6 +82,13 @@ function filteringCardsForSearch(array, textoDeBusquedaDelUsuario){
 }
 
 //
+let url
+if(title.text.includes('Home')){
+  url = [ './paginas/details.html',]
+}else{
+  url = [ './details.html',]
+}
+
 function searchNull() {
   container.innerHTML = `
   <article class="d-flex flex-column align-items-center">
@@ -102,7 +110,7 @@ function getCard(event) {
     <p class="card-text">${event.description}</p>
     <div class="d-flex justify-content-between align-items-center">
       <p>U$D ${event.price}</p>
-      <a href="../../paginas/details.html?id=${event.id}" class="btn btn-primary">More details</a>
+      <a href="${url[0]}?id=${event.id}" class="btn btn-primary">More details</a>
     </div>
   </div>
   </article>
